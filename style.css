@@ -1,3 +1,13 @@
 h1, p {
   font-family: Lato;
 }
+
+.post{
+  padding: 5px;
+  border: 1px solid blue;
+}
+.post ul{
+  background: #ccc;
+  margin: 5px;
+  
+}

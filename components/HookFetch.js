@@ -16,12 +16,13 @@ function HookFetch(){
       .catch(err => console.log(err))
   }, [])
   return (
-    <div>
-      <ul>
+    <div className='post'>
+      <ul >
         {
           posts.map(post => {
             return(
              <h4>
+
              {post.body}
              </h4>
             )
