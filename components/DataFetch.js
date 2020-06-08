@@ -5,6 +5,7 @@ function DataFetch(){
 
   const [post, setPost] = useState({})
   const [count, setCount] = useState(1)
+  const [error, setError] = useState('')
 
   useEffect(() => {
     axios
@@ -13,7 +14,12 @@ function DataFetch(){
         console.log(res.data)
         setPost(res.data)
       })
-      .catch(err => console.log(err))
+      .catch(err => {
+        console.log(err)
+        setError('unable to fetch data')
+
+      })
+
   }, [post])
 
   return (
@@ -21,7 +27,8 @@ function DataFetch(){
       <button type='button' onClick={() => setCount(count - 1)}>prev post</button>
       <button type='button' onClick={() => setCount(count + 1)}>next post</button>
       <div>
-        {post.body}
+        <p>{post.body}</p>
+        <h1>{error}</h1>
       </div>
     </div>
   )
