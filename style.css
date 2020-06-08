@@ -11,7 +11,7 @@
   align-content: center;
   position: relative;
   padding: 5px;
-  border: 1px solid blue;
+  background: rgba(235, 249, 255, 0.829);
   height: 40vh;
 
 }
@@ -50,8 +50,9 @@
 }
 .post div > p{
   line-height: 20px;
-   padding: 5px;
+  padding: 5px;
   margin: 5px;
+  color: rgb(75, 18, 18)
 }
 
 .error{
