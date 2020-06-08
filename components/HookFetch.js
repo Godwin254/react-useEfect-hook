@@ -6,7 +6,13 @@ function HookFetch(){
 
   const [posts, setPost] = useState([]);
 
-
+  UseEffect(() => {
+    axios
+      .get(`https://jsonplaceholder.typicode.com/posts`)
+      .then(res => {
+        console.log(res)
+      })
+  })
   return (
     <div>
       <ul>
