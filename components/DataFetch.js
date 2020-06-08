@@ -16,7 +16,7 @@ function DataFetch(){
       })
       .catch(err => {
         console.log(err)
-        setError('unable to fetch data')
+        setError(error='unable to fetch data')
 
       })
 
