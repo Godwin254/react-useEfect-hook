@@ -9,7 +9,7 @@ function DataFetch(){
 
   useEffect(() => {
     axios
-      .get(`https://jsonplaceholder.typicode.com/posts/${count}`)
+      .get(`https://jsonplaceholder.typicode.com1/posts/${count}`)
       .then(res => {
         console.log(res.data)
         setPost(res.data)
@@ -28,7 +28,7 @@ function DataFetch(){
       <button type='button' onClick={() => setCount(count + 1)}>next post</button>
       <div>
         <p>{post.body}</p>
-        <h1>{error}</h1>
+        <h1 className ="error">{error}</h1>
       </div>
     </div>
   )
