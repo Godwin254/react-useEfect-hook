@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import './style.css';
-import HookFetch from './components/HookFetch'
+import DataFetch from './components/DataFetch'
 
 
 class App extends Component {
@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <div>
-       
+       < DataFetch/>
       </div>
     );
   }

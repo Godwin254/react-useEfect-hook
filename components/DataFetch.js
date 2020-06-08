@@ -10,19 +10,21 @@ function DataFetch(){
     axios
       .get(`https://jsonplaceholder.typicode.com/posts/${count}`)
       .then(res => {
-        console.log(res)
+        console.log(res.data)
         setPost(res.data)
       })
       .catch(err => console.log(err))
-  })
+  }, [post])
 
   return (
     <div>
       <button type='button' onClick={() => setCount(count + 1)}>next post</button>
       <button type='button' onClick={() => setCount(count - 1)}>prev post</button>
       <div>
-      
+        {post.body}
       </div>
     </div>
   )
 }
+
+export default DataFetch;
