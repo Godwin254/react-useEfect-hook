@@ -9,24 +9,25 @@ function DataFetch(){
 
   useEffect(() => {
     axios
-      .get(`https://jsonplaceholder.typicode.com1/posts/${count}`)
+      .get(`https://jsonplaceholder.typicode.com/posts/${count}`)
       .then(res => {
         console.log(res.data)
         setPost(res.data)
       })
       .catch(err => {
         console.log(err)
-        setError(error='unable to fetch data')
+        setError(error='unable to fetch data!')
 
       })
 
   }, [count])
 
   return (
-    <div>
+    <div className='post'>
       <button type='button' onClick={() => setCount(count - 1)}>prev post</button>
       <button type='button' onClick={() => setCount(count + 1)}>next post</button>
       <div>
+        <h4>{post.title}</h4>
         <p>{post.body}</p>
         <h1 className ="error">{error}</h1>
       </div>

@@ -1,13 +1,59 @@
-h1, p {
-  font-family: Lato;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .post{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  position: relative;
   padding: 5px;
   border: 1px solid blue;
+  height: 40vh;
+
 }
-.post ul{
-  background: #ccc;
+.post button{
+  font-size: 15px;
+  border: 1px solid rgba(204, 204, 204, 0.377);
+  border-radius: 3px;
+  width: 30%;
+  height: 1cm;
+  cursor: pointer;
+  background: none;
+}
+.post button:hover{
+  font-weight: bold;
+  border: 1px solid #ccc;
+}
+
+.post button:nth-child(1){
+  position: absolute;
+  top: 10%;
+  left: 2%;
+}
+.post button:nth-child(2){
+  position: absolute;
+  top: 10%;
+  right: 2%;
+}
+
+.post div > h4{
+  font-weight: 20px;
+  color:blueviolet;
+  max-width: 70%;
+  padding: 5px;
+  margin: 60px 0 5px 5px;
+}
+.post div > p{
+   padding: 5px;
   margin: 5px;
-  
+}
+
+.error{
+  font-size: 1em;
+  color: red;
+  text-align: center;
 }
