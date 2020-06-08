@@ -1,13 +1,16 @@
-import React, {useState, useEfffect} from 'react';
+import React, {useState, useEffect} from 'react';
 
 function HookCounter(){
 
   const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    document.title = `You clicked ${count} times`
+  })
  
   return (
     <div>
-      <h1>Count: {count}</h1>
-      <button type='button' onclick={setCount(prevCount => prevCount + 1)}>Click count</button>
+      <button type='button' onClick={() =>setCount(count + 1)}>Click {count} times</button>
     </div>
   )
 }
