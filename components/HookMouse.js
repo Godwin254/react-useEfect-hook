@@ -14,7 +14,7 @@ function HookMouse() {
 
   useEffect(() => {
      console.log('-useEffect- called')
-     window.addEventListener('mousemove', logMousePosition)
+     window.addEventListener('mouse', logMousePosition)
   }, [])
   return (
     <div>
