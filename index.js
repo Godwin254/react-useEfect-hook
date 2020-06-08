@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Hello from './Hello';
 import './style.css';
-import HookCounter1 from './HookCounter'
+import HookMouse from './components/HookMouse'
 
 
 class App extends Component {
@@ -16,7 +16,7 @@ class App extends Component {
   render() {
     return (
       <div>
-       <HookCounter1/>
+       <HookMouse/>
       </div>
     );
   }

@@ -14,11 +14,13 @@ function HookMouse() {
 
   useEffect(() => {
      console.log('-useEffect- called')
-     window.addEventListener('mouseover', logMousePosition)
+     window.addEventListener('mousemove', logMousePosition)
   }, [])
   return (
     <div>
-      HOOK-MOUSE-POSITION X -{X} Y-{Y}
+      HOOK-MOUSE-POSITION X - {X} Y- {Y}
     </div>
   )
 }
+
+export default HookMouse
