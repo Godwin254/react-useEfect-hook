@@ -18,8 +18,8 @@ function DataFetch(){
 
   return (
     <div>
-      <button type='button' onClick={() => setCount(count + 1)}>next post</button>
       <button type='button' onClick={() => setCount(count - 1)}>prev post</button>
+      <button type='button' onClick={() => setCount(count + 1)}>next post</button>
       <div>
         {post.body}
       </div>
