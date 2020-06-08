@@ -20,7 +20,7 @@ function DataFetch(){
 
       })
 
-  }, [post])
+  }, [count])
 
   return (
     <div>
