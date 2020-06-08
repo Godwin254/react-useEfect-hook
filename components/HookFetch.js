@@ -21,14 +21,9 @@ function HookFetch(){
         {
           posts.map(post => {
             return(
-             <h4>{post.body}</h4>
-            )
-          })
-        }
-        {
-          posts.map(post => {
-            return(
-             <h4>{post.title}</h4>
+             <h4>
+             {post.body}
+             </h4>
             )
           })
         }
