@@ -1,17 +1,17 @@
 //fetching data with UseEffect
-import React, {UseEffect, useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import axios from 'axios'
 
 function HookFetch(){
 
-  const [posts, setPost] = useState([]);
+  const [posts, setPosts] = useState([]);
 
-  UseEffect(() => {
+  useEffect(() => {
     axios
-      .get(`https://jsonplaceholder.typicode.com/posts`)
+      .get('https://jsonplaceholder.typicode.com/posts')
       .then(res => {
-        console.log(res)
-        setPost(res.data)
+        console.log(res.data)
+        setPosts(res.data)
       })
       .catch(err => console.log(err))
   }, [])
@@ -32,3 +32,5 @@ function HookFetch(){
     </div>
   )
 }
+
+export default HookFetch

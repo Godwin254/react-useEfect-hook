@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import Hello from './Hello';
 import './style.css';
-import HookMouse from './components/HookMouse'
+import HookFetch from './components/HookFetch'
 
 
 class App extends Component {
@@ -16,7 +16,7 @@ class App extends Component {
   render() {
     return (
       <div>
-       <HookMouse/>
+       <HookFetch/>
       </div>
     );
   }
