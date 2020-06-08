@@ -19,7 +19,14 @@ function HookFetch(){
     <div>
       <ul>
         {
-
+          posts.map(post => {
+            return(
+              <React.fragment>
+                <h4>{post.title}</h4>
+                <h6>{post.body}</h6>
+              </React.fragment>
+            )
+          })
         }
       </ul>
     </div>
