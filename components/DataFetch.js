@@ -7,13 +7,19 @@ function DataFetch(){
   const [count, setCount] = useState(1)
 
   useEffect(() => {
-    
+    axios
+      .get(`https://jsonplaceholder.typicode.com/posts/${count}`)
+      .then(res => {
+        console.log(res)
+        setPost(res.data)
+      })
+      .catch(err => console.log(err))
   })
 
   return (
     <div>
-      <button type='button'>next post</button>
-      <button type='button'>prev post</button>
+      <button type='button' onClick={() => setCount(count + 1)}>next post</button>
+      <button type='button' onClick={() => setCount(count - 1)}>prev post</button>
       <div>
       
       </div>
