@@ -57,8 +57,11 @@
 }
 
 .error{
-
+  position: absolute;
+  bottom: 10%;
+  left: 30%;
+  width: 40%;
   font-size: 1em;
-  color: rgb(253, 51, 51);
+  color: rgb(255, 86, 86);
   text-align: center;
 }
